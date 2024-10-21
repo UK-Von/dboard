@@ -1,0 +1,1140 @@
+/* General reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7cebc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f6b468;
+    box-shadow: 0 2px 5px rgba(183, 22, 22, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* Logo styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    word-wrap: break-word;
+}
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 8px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    font-weight: bold;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #8d4920;
+    border-bottom: 2px solid #8d4920;
+}
+/* Profile button styling */
+.profile-btn {
+    background-color: #bc6c25;
+    font-weight: bold;
+    color: #000000;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+    background-color: #8d4920;
+}
+
+/* Main content area styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+/* Dashboard content box */
+.dashboard-box {
+    border: 2px solid #bc6c25; /* Applying #bc6c25 to the canvas border */
+    flex-direction: column;
+    justify-content: center; /* Align content to the top */
+    align-items: center; /* Align items to the left */
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+.dashboard-box h3 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.dashboard-box label {
+    margin-right: 10px; /* Space between label and select */
+}
+
+.dashboard-box select {
+    margin-bottom: 20px; /* Space below each select */
+    padding: 5px; /* Padding inside select */
+}
+
+
+/* Marketplace grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px;
+    padding: 10px;
+    
+}
+
+.product-item {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-item p {
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+/* Product Details Section */
+.product-view {
+    position: relative; /* Set relative positioning for the container */
+    display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
+    gap: 20px; /* Space between image and info */
+    margin-top: 10px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    flex: 1; /* Image takes some space */
+    max-width: 300px; /* Optional: Limit image size */
+}
+
+.product-image img {
+    width: 100%; /* Ensure image fits the container */
+    height: 100%; /* Ensure full container size */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 2; /* Info takes the remaining space */
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.product-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.product-info button {
+    padding: 8px 12px;
+    margin-right: 20px; /* Increased right margin to create more space between buttons */
+    background-color: #bc6c25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+    background-color: #8d4920;
+
+}
+/* Search and filter bar */
+.search-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+#search-bar {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling the filter buttons */
+.filter-btn {
+    padding: 10px;
+    background-color: #bc6c25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 0 1 auto;
+    margin: 5px;
+}
+.filter-btn:hover {
+    background-color: #8d4920;
+}
+
+.filter-btn.active {
+    background-color: #333;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    gap: 10px; /* Space between buttons */
+    margin-top: 40px; /* Add space above the buttons */
+}
+
+/* Adjust button styles if needed */
+.button-container button {
+    padding: 10px; /* Adjust padding */
+    background-color: #bc6c25; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color:#8d4920; /* Darker green on hover */
+}
+
+/* Add to Cart Button */
+
+button {
+    padding: 8px 12px;
+    background-color: #bc6c25;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #8d4920;;
+    transform: scale(1.05);
+}
+.back-btn {
+    position: absolute; /* Position the back button absolutely */
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    font-size: 20px; /* Adjust font size as needed */
+    cursor: pointer; /* Change cursor to pointer */
+}
+.star-rating {
+    font-size: 24px; /* Adjust size as needed */
+    color: #d3d3d3; /* Light grey for unshaded stars */
+}
+
+.star-rating.filled {
+    color: gold; /* Gold for filled stars */
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .dashboard-box {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+
+    .product-item img {
+        max-height: 100px;
+    }
+
+    .product-view {
+        padding: 15px;
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem;
+    }
+    .search-filter-bar {
+        flex-direction: column; /* Stack elements */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-filter-bar {
+        display: flex;
+        flex-direction: column; /* Stack the filter buttons vertically */
+    }
+    .filter-btn {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+    #search-bar {
+        width: 100%; /* Make the search bar full width */
+        margin-bottom: 10px; /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-box {
+        padding: 5px; /* Further reduce padding for mobile */
+    }
+    .product-item img {
+        max-height: 100px; /* Adjust max height for images on mobile */
+    }
+
+    .product-view {
+        padding: 10px;
+    }
+
+    .product-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .product-info p {
+        font-size: 0.9rem;
+    }
+
+    #search-bar {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .filter-btn {
+        width: 100%; /* Full width buttons */
+    }
+}
+/* Parent container for the carousel */
+.offers-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1000px; /* Adjust this to your desired maximum width */
+    margin: 20px auto;
+    align-items: stretch; /* Stretch items to match height */
+    
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    flex: 0 0 60%; /* Adjust width to 60% of the parent */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure items stretch */
+    border: 2px solid #bc6c25; /* Applying #bc6c25 to the canvas border */
+}
+
+/* Ensure full height of carousel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Full width */
+    align-items: center;
+    height: 100%; /* Ensure it takes full height */
+}
+
+/* Individual carousel item */
+.carousel-item {
+    min-width: 100%; /* Each item takes up full width */
+    box-sizing: border-box;
+    text-align: center;
+    flex-direction: column;
+    display: flex; /* Flex layout */
+}
+
+/* Images in carousel items */
+.carousel-item img {
+    width: 100%; /* Fit image to container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 120px; /* Consistent max height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+/* Carousel button styles */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 8px;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Hover effect */
+}
+
+/* Top Trends Section Styling */
+.top-trends-section {
+    position: relative;
+    flex: 0 0 35%; /* Adjust width to 35% of the parent */
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the start */
+    border: 2px solid #bc6c25; /* Applying #bc6c25 to the canvas border */
+    font-weight: bold;
+}
+
+.top-trends-header {
+    display: flex; /* Use flexbox for header */
+    justify-content: space-between; /* Space between title and button */
+    align-items: center; /* Center align items */
+    
+}
+
+.see-all-trends {
+    background-color: transparent; /* Transparent button */
+    border: none; /* Remove border */
+    font-size: 20px; /* Adjust size */
+    line-height: .8; /* Remove extra line height */
+    font-size: 24px; /* Font size */
+    color: rgb(14, 14, 14); /* Text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover effect */
+ 
+    
+}
+
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 5px;
+}
+
+.trend-item {
+    position: relative; /* Position relative for overlay */
+    cursor: pointer; /* Pointer cursor */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.image-container {
+    position: relative; /* For absolute positioning of overlay */
+    height: 100%;
+    margin-bottom: 10%;
+}
+
+.image-container img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Maintain aspect ratio and fill */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.overlay-text {
+    position: absolute; /* Position over the image */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 10px 0; /* Padding for spacing */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Fade effect */
+}
+
+.trend-item:hover .overlay-text {
+    opacity: 1; /* Show text on hover */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+/* Style for the "Back to Dashboard" button */
+.back-button {
+    padding: 8px 16px;
+    background-color: transparent; /* Green background */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    padding: 5px 10px;
+}
+
+.back-button:hover {
+    background-color: #8d4920;
+}
+
+/* Container for All Products View */
+.all-products-view {
+    display: grid !important; /* Ensures grid display */
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns per row */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Padding around the grid */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Individual Product Items */
+.all-products-view .trend-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Background for better visibility */
+    height: 250px; /* Set consistent height */
+    width: 100%; /* Ensure the item fills the available space */
+    display: block; /* Ensure the items behave properly in the grid */
+}
+
+/* Hover effect for Product Items */
+.all-products-view .trend-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container to ensure proper image scaling */
+.all-products-view .image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.all-products-view .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Overlay text styling */
+.all-products-view .overlay-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    
+    .offers-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel-container, .top-trends-section {
+        width: 100%;
+        margin: 0;
+    }
+
+    .trends-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* Container for slider buttons and index */
+.slider-button-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically centered */
+    margin-top: -30px; /* Optional: Space above buttons */
+    margin-bottom: 10px;
+}
+
+/* Image index styling */
+#image-index {
+    margin-right: 13px; /* Space between index and buttons */
+    font-weight: bold; /* Make it bold */
+    color: #000; /* Set text color */
+    margin-left: 0px;
+}
+
+/* Button styling */
+.slider-button {
+    padding: 8px 12px; /* Padding for buttons */
+    background-color: #bc6c25; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Add margin to the next button for spacing */
+#next-btn {
+    margin-left: 0px; /* Adjust this value for desired gap */
+}
+
+/* Hover effect for buttons */
+.slider-button:hover {
+    background-color: #a6551e; /* Darker color on hover */
+}
+
+/* Styling the labels */
+label {
+    color: #000000; /* Applying #bc6c25 color to labels */
+    font-weight: bold;
+}
+
+/* Styling the dropdowns (select elements) */
+select {
+    border: 1.5px solid #a6551e; /* Applying #bc6c25 border to dropdowns */
+    background-color: #f1e6d4; /* Light beige color inside the dropdown box */
+    color: #000000; /* Dark text color */
+    transition: border-color 0.3s ease;
+}
+/* Hover effect for dropdowns */
+select:hover {
+    border-color: #a6551e; /* Darker shade of #bc6c25 on hover */
+}
+
+/* Focus state for dropdowns */
+select:focus {
+    border-color: #a6551e; /* Keep #bc6c25 color on focus */
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(255, 145, 0); /* Shadow with #bc6c25 */
+}
+
+/* Styling the canvas (chart area) */
+canvas {
+    border: 2px solid #bc6c25; /* Applying #bc6c25 to the canvas border */
+    background-color: #f1e6d4; /* White background for the chart */
+}
+
+
+.ad-banner {
+    width: 100%; /* Full-width banner */
+    max-width: 1000px; /* Optional: limit the maximum width */
+    height: 200px; /* Landscape height */
+    border: 2px solid #bc6c25; /* Border color */
+    background-color: #f1e6d4; /* Background color */
+    position: relative;
+    margin: 0 auto; /* Center the banner horizontally */
+    overflow: hidden; /* Hide overflow from slides */
+    margin-top: 20px;
+}
+
+.ad-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: 100%;
+    height: 100%;
+}
+
+.ad-slide {
+    min-width: 100%; /* Each slide takes up full width */
+    height: 100%; /* Full height for landscape effect */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    position: relative;
+}
+
+.ad-slide img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Keep height proportional for landscape */
+    object-fit: cover; /* Ensure image covers its container */
+    border-radius: 8px; /* Optional: round the image corners */
+}
+
+.ad-caption {
+    position: absolute;
+    bottom:5px;
+    left: 10px;
+    background-color: rgba(166, 85, 30, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.ad-navigation {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Position dots on the right */
+    text-align: center;
+}
+
+.ad-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ad-dot.active {
+    background-color: #bc6c25; /* Active dot color */
+}
+
+
+/* Styling for the A4-sized photo */
+.a4-photo {
+    margin-top: 20px;
+    width: 265mm;
+    height: 500mm;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #a6551e;
+}
+
+@media (max-width: 600px) {
+    .ad-banner {
+        height: 150px; /* Reduce banner height for smaller screens */
+    }
+
+    .ad-caption {
+        font-size: 1rem; /* Smaller caption font size */
+    }
+
+    .ad-slide img {
+        border-radius: 4px; /* Smaller border radius on phones */
+    }
+
+    .a4-photo {
+        max-width: 100%; /* Make the A4 photo fit screen width */
+        height: auto;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+    .ad-banner {
+        height: 180px; /* Adjust banner height for tablets */
+    }
+
+    .ad-caption {
+        font-size: 1.1rem; /* Slightly larger caption font for tablets */
+    }
+
+    .a4-photo {
+        max-width: 100%; /* A4 photo width adapts to screen size */
+        height: auto;
+    }
+}
+
+/* Desktops */
+@media (min-width: 993px) {
+    .ad-banner {
+        height: 200px; /* Full height for larger screens */
+    }
+
+    .ad-caption {
+        font-size: 1.2rem; /* Larger captions for desktop */
+    }
+
+    .a4-photo {
+        max-width: 265mm; /* Use A4 width for desktops */
+        height: 500mm; /* Adjust the height for the photo */
+    }
+}
+
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+}
+
+/* Modal content styling for zoom effect */
+.modal-content {
+    max-height: 90%; /* Limit height to avoid exceeding the viewport */
+    width: auto; /* Set to auto to maintain aspect ratio */
+    max-width: 90%; /* Limit max width to 90% of the modal */
+    height: auto; /* Set to auto to maintain aspect ratio */
+    max-height: 90%; /* Set max-height to 90% of the modal */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+    cursor: zoom-in; /* Indicate zoomable */
+    margin-top: 60px;
+}
+
+/* Zoomed-in state */
+.modal-content.zoomed {
+    transform: scale(2.8);
+    cursor: zoom-out; /* Indicate zoom-out */
+}
+
+/* Styling for the close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Caption styling */
+#caption {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+/* start nath css */
+.cart-item-row {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 15px; /* Increased space between cart items */
+    padding: 15px; /* Increased padding around the cart item */
+    border: 2px solid #ccc; /* Thicker border for visual separation */
+    border-radius: 10px; /* More rounded corners */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    font-size: 1.2em; /* Increase font size for better readability */
+    background-color: #f9f9f9; /* Optional: add a background color */
+}
+
+#cart-items {
+    max-height: 400px; /* Set a maximum height for the cart */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: add border for visibility */
+    padding: 10px; /* Optional: add padding */
+    margin: 10px; /* Optional: add margin */
+}
+
+
+.cart-item-row img {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 50px; /* Set a fixed width for images */
+    height: 50px; /* Set a fixed height for images */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.cart-item-row p {
+    margin: 5px 0; /* Margins for paragraph elements */
+    flex-grow: 1; /* Allow text to grow and fill space */
+    min-width: 0; /* Allow overflow to be managed */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #bc6c25;
+}
+
+
+.item-title {
+    font-weight: bold; /* Make the title bold */
+    margin: 0; /* Remove default margin */
+    overflow-wrap: break-word; /* Allow long words to break to the next line */
+    word-wrap: break-word; /* Legacy support for older browsers */
+    hyphens: auto; /* Enable hyphenation */
+    max-width: 200px; /* Set a max width for responsiveness, adjust as needed */
+}
+
+.item-description {
+    margin: 0; /* Remove default margin */
+    overflow-wrap: break-word; /* Allow long words to break to the next line */
+    word-wrap: break-word; /* Legacy support for older browsers */
+    hyphens: auto; /* Enable hyphenation */
+    cursor: pointer;
+    max-width: 200px; /* Set a max width for responsiveness, adjust as needed */
+}
+
+#toast {
+    visibility: hidden;
+    background-color: #ffffff; 
+    color: #333333; 
+    border-radius: 2px;
+    padding: 12px;
+    position: fixed; 
+    z-index: 1; 
+    right: 30px; 
+    bottom: 30px; 
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+}
+
+#toast.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+#checkout-toast {
+    visibility: hidden;
+    background-color: #ffffff; 
+    color: #333333; 
+    border-radius: 2px;
+    padding: 12px;
+    position: fixed; 
+    z-index: 1; 
+    right: 30px; 
+    bottom: 30px; 
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+}
+
+#checkout-toast.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+#checkout-toast-suc {
+    visibility: hidden;
+    background-color: #ffffff; 
+    color: #333333; 
+    border-radius: 2px;
+    padding: 12px;
+    position: fixed; 
+    z-index: 1; 
+    right: 30px; 
+    bottom: 30px; 
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+}
+
+#checkout-toast-suc.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+.checkout-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .cart-item-row {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .cart-item-row img {
+        margin-bottom: 10px; /* Add space below the image */
+    }
+    
+    .cart-item-row p {
+        white-space: normal; /* Allow wrapping for small screens */
+    }
+}
+
+/* end nath css */
